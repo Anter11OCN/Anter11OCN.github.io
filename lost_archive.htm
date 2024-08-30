@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lost Media</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    p {
+      color: red;
+      text-align: left;
+    } 
+	
+	.navbar {
+	  background-image: linear-gradient(#FAFAFA, #E9E9E9);
+	  padding-top: 0px; 
+	  padding-bottom: 0px; 
+	}
+	
+	.navbar .nav>li {
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	}
+	
+	.navbar .nav>li>a {
+      float: right;
+      padding: 10px 15px 10px;
+      color: #6A6A6A;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #fff;
+    }
+    .navbar .nav>li>a:hover {
+      color: #202020;
+      text-decoration: none;
+      background-color: transparent;
+    }
+	
+	.jumbotron {
+	  background-color: #823030;
+	  background-size: 750px 320px;
+	  height: 220px;
+	  background-repeat: no-repeat;
+	  backgrou0d-position: center;
+	}
+	
+	.brand {
+      font-size: 20px;
+	  color: #303030;
+	}
+	
+	li {
+      line-height: 20px;
+    }
+	.nav {
+	  float: right;
+	}
+	.nav-collapse ul.nav li:hover {
+      background-color: #E3E3E3;
+    }
+	
+	body {
+      margin: 0;
+      font-family: Lato, "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      color: #303030;
+      background-color: #fff;
+    }
+	
+	body, body>.container>.row>.col-sm-4>.sticky-top>.card>.container>ul>li>a {
+      margin: 0;
+      font-family: "Lato", "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      color: #303030;
+	  background-color: #FFFFFF;
+    }
+	
+	h1, h2, h3, h5, h5 {
+      margin: 10px 0;
+      font-family: inherit;
+      font-weight: bold;
+      line-height: 20px;
+      color: inherit;
+      text-rendering: optimizelegibility;
+    }
+	
+	h1, h2, h3 {
+      line-height: 40px;
+    }
+	
+	h1 {
+	  font-size: 38.5px;
+	}
+	
+		table {
+	  background-color: transparent;
+	  border-spacing: 0;
+	}
+	
+	.table-bordered {
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+	  border-left: 0;
+	  border-collapse: separate;
+	}
+	
+	.table-bordered thead:first-child tr:first-child>th:first-child, .table-bordered tbody:first-child tr:first-child>td:first-child, .table-bordered tbody:first-child tr:first-child>th:first-child {
+      border-top-left-radius: 4px;
+    }
+	
+	.table-bordered caption+thead tr:first-child th, .table-bordered caption+tbody tr:first-child th, .table-bordered caption+tbody tr:first-child td, .table-bordered colgroup+thead tr:first-child th, .table-bordered colgroup+tbody tr:first-child th, .table-bordered colgroup+tbody tr:first-child td, .table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td {
+      border-top: 0;
+	  border-bottom: 0;
+    }
+	
+	.table caption+thead tr:first-child th, .table caption+thead tr:first-child td, .table colgroup+thead tr:first-child th, .table colgroup+thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
+      border-top: 0;
+	  border-bottom: 0;
+    }
+	
+	.table-bordered th, .table-bordered td {
+      border-left: 1px solid #ddd;
+	  border-right: 0;
+	  border-bottom: 0;
+    }
+	
+	.table th, .table td {
+      padding: 8px;
+      line-height: 20px;
+      text-align: left;
+      vertical-align: top;
+      border-top: 1px solid #ddd;
+    }
+	
+	td>div {
+	  padding-left: 0px;
+	}
+	td>div>div>a, td>div>div>span>a {
+	  color: #6A6A6A;
+	}
+	td>div>div>a:hover, td>div>div>span>a:hover {
+	  color: #202020;
+	}
+	
+	.table-striped tbody>tr:hover {
+	  background-color: #E3E3E3;
+	}
+	
+	.table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
+      background-color: #f8f8f8;
+    }
+	
+	.table-striped>tbody>tr:hover>* {
+      background-color: #ECECEC !important;
+    }
+	
+	ul.dropdown-menu {
+	  padding-top: 5px;
+      padding-right: 0px;
+      padding-bottom: 5px;
+      padding-left: 0px;
+	  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
+	  font-size: 16px;
+	  width: 175px;
+	  border-top-width: 2px;
+      border-right-width: 2px;
+      border-bottom-width: 2px;
+      border-left-width: 2px;
+      border-top-style: solid;
+      border-right-style: solid;
+      border-bottom-style: solid;
+      border-left-style: solid;
+	  border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      border-bottom-left-radius: 6px;
+	}
+	
+	.dropdown-menu>li {
+	  line-height: 20px;
+	  padding-top: 2px;
+      padding-right: 20px;
+      padding-bottom: 2px;
+      padding-left: 20px;
+	}
+	
+	.dropdown-menu>li>a {
+	  font-size: 14px;
+	  line-height: 20px;
+	  height: 20px;
+	}
+	
+	.navbar .nav>li>.dropdown-menu:before {
+	  position: absolute;
+      top: -7px;
+      left: 9px;
+      display: inline-block;
+      border-right-width: 7px;
+	  border-right-style: solid;
+	  border-right-color: transparent;
+	  border-bottom-width: 7px;
+      border-bottom-style: solid;
+      border-bottom-color: #CCC;
+      border-left-width: 7px;
+      border-left-style: solid;
+      border-left-color: transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+      content: '';
+	}
+	
+	.navbar .nav>li>.dropdown-menu:after {
+	  position: absolute;
+      top: -6px;
+      left: 10px;
+      display: inline-block;
+	  border-right-width: 6px;
+      border-right-style: solid;
+      border-right-color: transparent;
+	  border-bottom-width: 6px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(255, 255, 255);
+	  border-left-width: 6px;
+      border-left-style: solid;
+      border-left-color: transparent;
+	  content: '';
+	}
+	
+	.navbar .nav>li {
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	}
+	
+	.navbar .nav>li>a {
+      float: right;
+      padding: 10px 15px 10px;
+      color: #6A6A6A;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #fff;
+    }
+    .navbar .nav>li>a:hover {
+      color: #202020;
+      text-decoration: none;
+      background-color: transparent;
+    }
+	
+	.dropdown-menu>li>a {
+	  color: #404040;
+	}
+	.dropdown-menu>li>a:hover {
+	  text-decoration: none;
+	}
+	
+	.dropdown-menu>li>a>div:hover {
+	  background-color: #E5E5E5 !important;
+	}
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-light">
+  <a class="navbar-brand" href="index.htm">Anter11</a>
+  <div class="nav-collapse justify-content-end">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="http://www.youtube.com/@anter11">
+		  <i class="fa fa-play"></i>
+		  Youtube
+		</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">
+          <i class="fa fa-cubes"></i>
+          Archive
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="archive_sr.htm">
+              Serbian
+            </a>
+          </li>
+		  <li>
+            <a href="">
+              Croatian [WIP]
+            </a>
+          </li>
+		  <div class="dropdown-divider"></div>
+		  <li>
+            <a href="lost_archive.htm" style="color: #8B0000">
+              Lost songs
+            </a>
+          </li>
+		</ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.htm">
+		  <i class="fa fa-dollar-sign"></i>
+		  Donate
+		</a>
+      </li>
+	  <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <i class="fa fa-globe"></i>
+          Language
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="https://web.archive.org/web/20160207075718/https://oc.tc/leaderboard">
+              <i class="flag-icon flag-icon-ad"></i>
+              English
+            </a>
+          </li>
+          <li>
+            <a href="/web/20160207075718/http://oc.tc/channels">
+              <i class="flag flag-sr"></i>
+              Serbian 
+            </a>
+          </li>
+		</ul>
+		<li>
+          <a href="contact.htm">
+            <i class="fa fa-list-ol"></i>
+            About Me
+          </a>
+        </li>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 text-center" style="color: #E0E0E0;
+            text-shadow: -1px 1px 0 #000,
+                         1px 1px 0 #000,
+                         1px -1px 0 #000,
+                         -1px -1px 0 #000;">Lost Media
+	</h1>
+  </div>
+</div>
+</br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+	  <h2>Serbian</h2>
+	  <br>
+	  <h5><i class="fa fa-video" style="color:#E00000"></i>&nbsp;Lost Videos</h5>
+	  <table class="table table-bordered table-striped">
+	    <thead>
+		  <th width="16%">Singer</th>
+		  <th width="25%">Song</th>
+		  <th width="55%">More Info</th>
+		</thead>
+		<tbody>
+        </tbody>
+	  </table>
+	  <h5><i class="fa fa-video" style="color:#E05400"></i>&nbsp;Video Existance Unknown</h5>
+	  <table class="table table-bordered table-striped">
+	    <thead>
+		  <th width="16%">Singer</th>
+		  <th width="25%">Song</th>
+		  <th width="55%">More Info</th>
+		</thead>
+		<tbody>
+		  <tr>
+		    <td>Baja Mali Knindža</td>
+			<td>Srpski Dobrovoljac</td>
+			<td>There is a reference to a "Srpski Dobrovoljac" video in an article which describes the video opening with a Arkan's tiger. There exists a video like this but it is likely a fan creation.</td>
+		  </tr>
+		  <tr>
+		    <td>Baja Mali Knindža</td>
+			<td>Srpski Dobrovoljac</td>
+			<td>The same artivcle has a reference to "Igraju se Delije" which describes 'The performer [Baja ?] is depicted soberly in a blazer'. If this video existed it is now lost.</td>
+		  </tr>
+        </tbody>
+	  </table>
+	  <h5><i class="fa fa-video" style="color:#E0E000"></i>&nbsp;Possibly Unofficial Videos</h5>
+	  <table class="table table-bordered table-striped">
+	    <thead>
+		  <th width="16%">Singer</th>
+		  <th width="25%">Song</th>
+		  <th width="55%">More Info</th>
+		</thead>
+		<tbody>
+		  <tr>
+		    <td>Baja Mali Knindža</td>
+			<td>Morem Plovi Jedna Mala Barka</td>
+			<td>A video can be found on Youtube. If official it could have aired on TV.</td>
+		  </tr>
+		  <tr>
+		    <td>Baja Mali Knindža</td>
+			<td>Srpski Dobrovoljac</td>
+			<td>There is a reference to a "Srpski Dobrovoljac" video in an article which describes the video opening with a Arkan's tiger. There exists a video like this but it is likely a fan creation.</td>
+		  </tr>
+        </tbody>
+	  </table>
+	  <h5><i class="fa fa-video" style="color:#0000E0"></i>&nbsp;Partially lost videos</h5>
+	  <table class="table table-bordered table-striped">
+	    <thead>
+		  <th width="16%">Singer</th>
+		  <th width="25%">Song</th>
+		  <th width="55%">More Info</th>
+		</thead>
+		<tbody>
+		  <tr>
+		    <td>Lepi Mića</td>
+			<td>Ratkovi Vojnici</td>
+			<td>The only known copy of the video has been found. It is in very poor quality and its source is unknown. The HD version is lost. It is unknown if it existed and if other similar videos existed.</td>
+		  </tr>
+		  <tr>
+		    <td>Minđušari</td>
+			<td>Ovo je Moja Zemlja</td>
+			<td>The existing video is fragmented and incomplete.</td>
+		  </tr>
+		  <tr>
+		    <td>Minđušari</td>
+			<td>Molitva</td>
+			<td>The first minute is availiable on Minđušari facebook page, the rest is lost.</td>
+		  </tr>
+		  <tr>
+		    <td>Minđušari</td>
+			<td>Maćeha</td>
+			<td>The first minute is availiable on Minđušari facebook page, the rest is lost.</td>
+		  </tr>
+		  <tr>
+		    <td>Minđušari</td>
+			<td>Nema Raja</td>
+			<td>The first 1:45 is availiable on Youtube, the rest is lost.</td>
+		  </tr>
+        </tbody>
+	  </table>
+	  <br>
+	  <h5><i class="fa fa-music" style="color:#E00000"></i>&nbsp;Lost songs</h5>
+	  <table class="table table-bordered table-striped">
+	    <thead>
+		  <th width="16%">Singer</th>
+		  <th width="25%">Song</th>
+		  <th width="55%">More Info</th>
+		</thead>
+		<tbody>
+		  <tr>
+		    <td>Mišo Bojić</td>
+			<td>Sa Tromeđe Brale "Tromedja"</td>
+			<td>There is only one known digitisation of the Mišo Bojić - Srpske Pesme 2 album, where this song comes from. It was once posted onto GeoCities by a user "semberac5" under the name "Tromedja" by "Milos Bojic". Using oocities or other web archives have either come up with nothing, or dead links. It is not known how to contact semberac5, or if other copies exist. See below.</td>
+		  </tr>
+		  <tr>
+		    <td>Neđo Mitrović</td>
+			<td>Birčanski Komandanti (Intrumental)</td>
+			<td>For some reason this song can't be found.</td>
+		  </tr>
+		  <tr>
+		    <td>Neđo Mitrović</td>
+			<td>Braća Krajišnici</td>
+			<td>This song and 6 more from it's album are lost. See below.</td>
+		  </tr>
+		  <tr>
+		    <td>Neđo Mitrović</td>
+			<td>Slavni Birač s Andrićem na Čelu</td>
+			<td>This song and 6 more from it's album are lost. See below.</td>
+		  </tr>
+		  <tr>
+		    <td>Neđo Mitrović</td>
+			<td>Tražim Ženu Crne Kose</td>
+			<td>This song and 6 more from it's album are lost. See below.</td>
+		  </tr>
+		  <tr>
+		    <td>Neđo Mitrović</td>
+			<td>Dok Fijuču Meci</td>
+			<td>This song and 6 more from it's album are lost. See below.</td>
+		  </tr>
+		  <tr>
+		    <td>Neđo Mitrović</td>
+			<td>Semberijo Srećna Budi</td>
+			<td>This song and 6 more from it's album are lost. See below.</td>
+		  </tr>
+		  <tr>
+		    <td>Neđo Mitrović</td>
+			<td>Na sred Gore Romanije</td>
+			<td>This song and 6 more from it's album are lost. See below.</td>
+		  </tr>
+		  <tr>
+		    <td>Pirgo</td>
+			<td>Posavina Srpska Zemlja</td>
+			<td>Pirgo's one war album "Neka Živi Krajina" was only digitised once, maybe twice. No record of this song being online can be found, though it must have existed at one point. It's possible that it disappeared because it has the same name as a more famous Koridor song. Although Pirgo's songs tend be known by 2 different names there are no unknown Pirgo songs floating around either. The previous song on the album (Brode Moj) cuts off slightly too short. See below.</td>
+		  </tr>
+        </tbody>
+	  </table>
+	  <h5><i class="fa fa-music" style="color:#E05400"></i>&nbsp;Unknown songs</h5>
+	  <table class="table table-bordered table-striped">
+	    <thead>
+		  <th width="16%">Singer</th>
+		  <th width="25%">Song</th>
+		  <th width="55%">More Info</th>
+		</thead>
+		<tbody>
+		  <tr>
+		    <td>Kosta Marić<br>Kosta Perić</td>
+			<td></td>
+			<td>Two unknown songs exist from Kosta Marić. One source calls the singer Kosta Perić. They sound as if they are from the same album. It is unknown if there is more songs from that album. See below.</td>
+		  </tr>
+        </tbody>
+		<tbody>
+		  <tr>
+		    <td>Mićo Kuzmanović</td>
+			<td></td>
+			<td>There are 5 availiable songs credited by Mićo Kuzmanović. Nothing is known about the singer besides him sharing the same name as a well known soccer player. There might be more songs on this album. Mićo Kuzmanović has a Youtube channel, where he sings occaisionally, but it isn't known if this is the same person. See below.</td>
+		  </tr>
+        </tbody>
+	  </table>
+	</div>
+  </div>
+  <hr>
+</div>
+
+<footer>
+  <div>
+    <h6 class="text-center">© Anter11 2023</h6>
+  </div>
+</footer>
+
+</body>
+</html>

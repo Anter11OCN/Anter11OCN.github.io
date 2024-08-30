@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Cyrillic</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    p {
+      color: red;
+      text-align: left;
+    } 
+	
+	.navbar {
+	  background-image: linear-gradient(#FAFAFA, #E9E9E9);
+	  padding-top: 0px; 
+	  padding-bottom: 0px; 
+	}
+	
+ul.dropdown-menu {
+	  padding-top: 5px;
+      padding-right: 0px;
+      padding-bottom: 5px;
+      padding-left: 0px;
+	  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
+	  font-size: 16px;
+	  width: 175px;
+	  border-top-width: 2px;
+      border-right-width: 2px;
+      border-bottom-width: 2px;
+      border-left-width: 2px;
+      border-top-style: solid;
+      border-right-style: solid;
+      border-bottom-style: solid;
+      border-left-style: solid;
+	  border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      border-bottom-left-radius: 6px;
+	}
+	
+	.dropdown-menu>li {
+	  line-height: 20px;
+	  padding-top: 2px;
+      padding-right: 20px;
+      padding-bottom: 2px;
+      padding-left: 20px;
+	}
+	
+	.dropdown-menu>li>a {
+	  font-size: 14px;
+	  line-height: 20px;
+	  height: 20px;
+	}
+	
+	.navbar .nav>li>.dropdown-menu:before {
+	  position: absolute;
+      top: -7px;
+      left: 9px;
+      display: inline-block;
+      border-right-width: 7px;
+	  border-right-style: solid;
+	  border-right-color: transparent;
+	  border-bottom-width: 7px;
+      border-bottom-style: solid;
+      border-bottom-color: #CCC;
+      border-left-width: 7px;
+      border-left-style: solid;
+      border-left-color: transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+      content: '';
+	}
+	
+	.navbar .nav>li>.dropdown-menu:after {
+	  position: absolute;
+      top: -6px;
+      left: 10px;
+      display: inline-block;
+	  border-right-width: 6px;
+      border-right-style: solid;
+      border-right-color: transparent;
+	  border-bottom-width: 6px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(255, 255, 255);
+	  border-left-width: 6px;
+      border-left-style: solid;
+      border-left-color: transparent;
+	  content: '';
+	}
+	
+	.navbar .nav>li {
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	}
+	
+	.navbar .nav>li>a {
+      float: right;
+      padding: 10px 15px 10px;
+      color: #6A6A6A;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #fff;
+    }
+    .navbar .nav>li>a:hover {
+      color: #202020;
+      text-decoration: none;
+      background-color: transparent;
+    }
+	
+	.dropdown-menu>li>a {
+	  color: #404040;
+	}
+	.dropdown-menu>li>a:hover {
+	  text-decoration: none;
+	}
+	
+	.dropdown-menu>li>a>div:hover {
+	  background-color: #E5E5E5 !important;
+	}
+	
+	.jumbotron {
+	  background-color: #823030;
+	  background-size: 750px 320px;
+	  height: 300px;
+	  background-repeat: no-repeat;
+	  backgrou0d-position: center;
+	}
+	
+	.brand {
+      font-size: 20px;
+	  color: #303030;
+	}
+	
+	li {
+      line-height: 20px;
+    }
+	.nav {
+	  float: right;
+	}
+	.nav-collapse ul.nav li:hover {
+      background-color: #E3E3E3;
+    }
+	
+	body {
+      margin: 0;
+      font-family: Lato, "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      color: #303030;
+      background-color: #fff;
+    }
+	
+	body, body>.container>.row>.col-sm-4>.sticky-top>.card>.container>ul>li>a {
+      margin: 0;
+      font-family: "Lato", "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      color: #303030;
+	  background-color: #FFFFFF;
+    }
+	
+	h1, h2, h3, h4, h5 {
+      margin: 10px 0;
+      font-family: inherit;
+      font-weight: bold;
+      line-height: 20px;
+      color: inherit;
+      text-rendering: optimizelegibility;
+    }
+	
+	h1, h2, h3 {
+      line-height: 40px;
+    }
+	
+	h1 {
+	  font-size: 38.5px;
+	}
+	
+	table {
+	  background-color: transparent;
+	  border-spacing: 0;
+	}
+	
+	.table-bordered {
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+	  border-left: 0;
+	  border-collapse: separate;
+	}
+	
+	.table-bordered thead:first-child tr:first-child>th:first-child, .table-bordered tbody:first-child tr:first-child>td:first-child, .table-bordered tbody:first-child tr:first-child>th:first-child {
+      border-top-left-radius: 4px;
+    }
+	
+	.table-bordered caption+thead tr:first-child th, .table-bordered caption+tbody tr:first-child th, .table-bordered caption+tbody tr:first-child td, .table-bordered colgroup+thead tr:first-child th, .table-bordered colgroup+tbody tr:first-child th, .table-bordered colgroup+tbody tr:first-child td, .table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td {
+      border-top: 0;
+	  border-bottom: 0;
+    }
+	
+	.table caption+thead tr:first-child th, .table caption+thead tr:first-child td, .table colgroup+thead tr:first-child th, .table colgroup+thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
+      border-top: 0;
+	  border-bottom: 0;
+    }
+	
+	.table-bordered th, .table-bordered td {
+      border-left: 1px solid #ddd;
+	  border-right: 0;
+	  border-bottom: 0;
+    }
+	
+	.table th, .table td {
+      padding: 8px;
+      line-height: 20px;
+      text-align: left;
+      vertical-align: top;
+      border-top: 1px solid #ddd;
+    }
+	
+	td>div {
+	  padding-left: 0px;
+	}
+	td>div>div>a, td>div>div>span>a {
+	  color: #6A6A6A;
+	}
+	td>div>div>a:hover, td>div>div>span>a:hover {
+	  color: #202020;
+	}
+	
+	.table-striped tbody>tr:hover {
+	  background-color: #E3E3E3;
+	}
+	
+	.table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
+      background-color: #f8f8f8;
+    }
+	
+	.table-striped>tbody>tr:hover>* {
+      background-color: #ECECEC !important;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-light">
+  <a class="navbar-brand" href="index.htm">Anter11</a>
+  <div class="nav-collapse justify-content-end">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="http://www.youtube.com/@anter11">
+		  <i class="fa fa-play"></i>
+		  Youtube
+		</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">
+          <i class="fa fa-cubes"></i>
+          Archive
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="archive_sr.htm">
+              Serbian
+            </a>
+          </li>
+		  <li>
+            <a href="">
+              Croatian [WIP]
+            </a>
+          </li>
+		  <div class="dropdown-divider"></div>
+		  <li>
+            <a href="lost_archive.htm" style="color: #8B0000">
+              Lost songs
+            </a>
+          </li>
+		</ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.htm">
+		  <i class="fa fa-dollar-sign"></i>
+		  Donate
+		</a>
+      </li>
+	  <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <i class="fa fa-globe"></i>
+          Language
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="https://web.archive.org/web/20160207075718/https://oc.tc/leaderboard">
+              <i class="flag-icon flag-icon-ad"></i>
+              English
+            </a>
+          </li>
+          <li>
+            <a href="/web/20160207075718/http://oc.tc/channels">
+              <i class="flag flag-sr"></i>
+              Serbian 
+            </a>
+          </li>
+		</ul>
+		<li>
+          <a href="contact.htm">
+            <i class="fa fa-list-ol"></i>
+            About Me
+          </a>
+        </li>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4 text-center" style="color: #E0E0E0;
+            text-shadow: -1px 1px 0 #000,
+                         1px 1px 0 #000,
+                         1px -1px 0 #000,
+                         -1px -1px 0 #000;">Cyrillic&nbsp;&nbsp;Script
+	</h1>
+	<br>
+    <p class="text-center" style="color: #262626; font-size: 24px; font-weight: 750;">Srpska ćirilica - Српска ћирилица</p>
+  </div>
+</div>
+</br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8">
+	  <h4>Serbian cyrillic - Српска ћирилица</h4>
+	  <p style="color: #202020">The Serbian alphabet is unique in that it can be written using 2 different scripts. English is only written in one. The English language is only written with the Laitn script. But Serbian can be written with both the Latin "latinica" or Cyrillic scripts "ćirilica". These are considered equal and interchangable, with either script being acceptable as long as you don't mix them. However, traditionally only Cyrillic was used (that is why this is the only one used on my channel). The two alphabets of each script also have different names: "abeceda" for Latin and "azbuka" for Cyrillic.</p>
+	  <p style="color: #202020">Below is a conversion table from Latin to Cyrillic, as well as the corresponding sound in English and its equivalents in Polish</p>
+	  
+	  <table class="table table-bordered table-striped">
+	    <thead>
+		  <th width="4%">Latin</th>
+		  <th width="4%">Cyrillic</th>
+		  <th width="5%">IPA</th>
+		  <th width="16%">Sound in English</th>
+		  <th width="20%">Polish equivalent</th>
+		</thead>
+		<tbody>
+		  <tr>
+		    <td>A</td>
+		    <td>А</td>
+		    <td>/ä/</td>
+		    <td>o in c<u>o</u>t</td>
+			<td>a, o, e, ie, _</td>
+		  </tr>
+		  <tr>
+		    <td>B</td>
+		    <td>Б</td>
+		    <td>/b/</td>
+		    <td>b in <u>b</u>all</td>
+			<td>b</td>
+		  </tr>
+		  <tr>
+		    <td>C</td>
+		    <td>Ц</td>
+		    <td>/t͡s/</td>
+		    <td>ts in ca<u>ts</u></td>
+			<td>c</td>
+		  </tr>
+		  <tr>
+		    <td>Ć</td>
+		    <td>Ћ</td>
+		    <td>/t͡ɕ/</td>
+		    <td>ch in <u>ch</u>eese {¹}</td>
+			<td>c</td>
+		  </tr>
+		  <tr>
+		    <td>Č</td>
+		    <td>Ч</td>
+		    <td>/t͡ʂ/</td>
+		    <td>ch in <u>ch</u>ur<u>ch</u>&nbsp;{¹}</td>
+			<td>cz</td>
+		  </tr>
+		  <tr>
+		    <td>D</td>
+		    <td>Д</td>
+		    <td>/d/</td>
+		    <td>d in <u>d</u>og</td>
+			<td>d, dzi, dź</td>
+		  </tr>
+		  <tr>
+		    <td>Đ</td>
+		    <td>Ђ</td>
+		    <td>/d͡ʑ/</td>
+		    <td>j in <u>j</u>eans</td>
+			<td>dz</td>
+		  </tr>
+		  <tr>
+		    <td>DŽ</td>
+		    <td>Џ</td>
+		    <td>/d͡ʐ/</td>
+		    <td>j in <u>j</u>uice</td>
+			<td>dż {²}</td>
+		  </tr>
+		  <tr>
+		    <td>E</td>
+		    <td>Е</td>
+		    <td>/e/</td>
+		    <td>e in b<u>e</u>d</td>
+			<td>ie (e), io (o), ió (ó), ia (a), ię (ę), ią (ą)</td>
+		  </tr>
+		  <tr>
+		    <td>F</td>
+		    <td>Ф</td>
+		    <td>/f/</td>
+		    <td>f in <u>f</u>an</td>
+			<td>f {²}</td>
+		  </tr>
+		  <tr>
+		    <td>G</td>
+		    <td>Г</td>
+		    <td>/g/</td>
+		    <td>g in <u>g</u>oat</td>
+			<td>g</td>
+		  </tr>
+		  <tr>
+		    <td>H</td>
+		    <td>Х</td>
+		    <td>/x/</td>
+		    <td>h in <u>h</u>orn {¹}</td>
+			<td>ch, h</td>
+		  </tr>
+		  <tr>
+		    <td>I</td>
+		    <td>И</td>
+		    <td>/i/</td>
+		    <td>ea in b<u>ea</u>t {¹}</td>
+			<td>i, y</td>
+		  </tr>
+		  <tr>
+		    <td>J</td>
+		    <td>Ј</td>
+		    <td>/j/</td>
+		    <td>y in <u>y</u>ellow</td>
+			<td>j, i</td>
+		  </tr>
+		  <tr>
+		    <td>K</td>
+		    <td>К</td>
+		    <td>/k/</td>
+		    <td>k in <u>k</u>ing</td>
+			<td>k</td>
+		  </tr>
+		  <tr>
+		    <td>L</td>
+		    <td>Л</td>
+		    <td>/ɫ/</td>
+		    <td>l in <u>l</u>ook</td>
+			<td>ł, l</td>
+		  </tr>
+		  <tr>
+		    <td>LJ</td>
+		    <td>Љ</td>
+		    <td>/ʎ/</td>
+		    <td>li in ita<u>li</u>an</td>
+			<td>l</td>
+		  </tr>
+		  <tr>
+		    <td>M</td>
+		    <td>М</td>
+		    <td>/m/</td>
+		    <td>m in <u>m</u>aze</td>
+			<td>m</td>
+		  </tr>
+		  <tr>
+		    <td>N</td>
+		    <td>Н</td>
+		    <td>/n/</td>
+		    <td>n in <u>n</u>o</td>
+			<td>n, ni, ń</td>
+		  </tr>
+		  <tr>
+		    <td>NJ</td>
+		    <td>Њ</td>
+		    <td>/ɲ/</td>
+		    <td>ny in ca<u>ny</u>on</td>
+			<td>ń, ni</td>
+		  </tr>
+		  <tr>
+		    <td>O</td>
+		    <td>О</td>
+		    <td>/ɔ/</td>
+		    <td>aw in p<u>aw</u>n {¹}</td>
+			<td>o, ó, e, a</td>
+		  </tr>
+		  <tr>
+		    <td>P</td>
+		    <td>П</td>
+		    <td>/p/</td>
+		    <td>p in <u>p</u>rince</td>
+			<td>p</td>
+		  </tr>
+		  <tr>
+		    <td>R</td>
+		    <td>Р</td>
+		    <td>/r/</td>
+		    <td>r in <u>r</u>ing {¹}</td>
+			<td>r, rz</td>
+		  </tr>
+		  <tr>
+		    <td>S</td>
+		    <td>С</td>
+		    <td>/s/</td>
+		    <td>s in <u>s</u>un</td>
+			<td>s, si, ś</td>
+		  </tr>
+		  <tr>
+		    <td>Š</td>
+		    <td>Ш</td>
+		    <td>/ʂ/</td>
+		    <td>sh in <u>sh</u>irt {¹}</td>
+			<td>sz</td>
+		  </tr>
+		  <tr>
+		    <td>T</td>
+		    <td>T</td>
+		    <td>/t/</td>
+		    <td>t in <u>t</u>oy</td>
+			<td>t, ci, ć</td>
+		  </tr>
+		  <tr>
+		    <td>U</td>
+		    <td>У</td>
+		    <td>/u/</td>
+		    <td>u in t<u>u</u>ne</td>
+			<td>u, ą, ę</td>
+		  </tr>
+		  <tr>
+		    <td>V</td>
+		    <td>В</td>
+		    <td>/v/</td>
+		    <td>v in <u>v</u>an</td>
+			<td>w</td>
+		  </tr>
+		  <tr>
+		    <td>Z</td>
+		    <td>З</td>
+		    <td>/z/</td>
+		    <td>z in <u>z</u>oo</td>
+			<td>z, zi, ź, dz</td>
+		  </tr>
+		  <tr>
+		    <td>Ž</td>
+		    <td>Ж</td>
+		    <td>/ʐ/</td>
+		    <td>si in vi<u>si</u>on {¹}</td>
+			<td>ż [ƶ] {³}</td>
+		  </tr>
+		</tbody>
+	  </table>
+	  <h5>Some notes:</h5>
+	  <dl>
+	    <dt>{¹} This sound does not exist in English, it is an approximation.</dt>
+		<dd>- Notably, all R's in Serbian are rolled</dd>
+		<dt>{²} These sounds are not cognate between Serbian and Polish.</dt>
+		<dd>- F exists solely in foreign words in both languages</dd>
+		<dd>- DŻ/DŽ can occur in native words (rarely), but they do not correlate to eachother.</dd>
+		<dt>{³} Polish Ż is occaisionally written as Ƶ</dt>
+	  </dl>
+	</div>
+	<div class="col-sm-4">
+	</div>
+  </div>
+  <hr>
+</div>
+
+<footer>
+  <div>
+    <h6 class="text-center">© Anter11 2023</h6>
+  </div>
+</footer>
+
+</body>
+</html>

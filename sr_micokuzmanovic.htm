@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mićo Kuzmanović</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+</script>
+  <style>
+    p {
+      color: red;
+      text-align: left;
+    }
+	
+	.navbar {
+	  background-image: linear-gradient(#FAFAFA, #E9E9E9);
+	  padding-top: 0px; 
+	  padding-bottom: 0px; 
+	}
+	
+	ul.dropdown-menu {
+	  padding-top: 5px;
+      padding-right: 0px;
+      padding-bottom: 5px;
+      padding-left: 0px;
+	  box-shadow: 0 10px 14px rgba(0, 0, 0, 0.2);
+	  font-size: 16px;
+	  width: 175px;
+	  border-top-width: 2px;
+      border-right-width: 2px;
+      border-bottom-width: 2px;
+      border-left-width: 2px;
+      border-top-style: solid;
+      border-right-style: solid;
+      border-bottom-style: solid;
+      border-left-style: solid;
+	  border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      border-bottom-left-radius: 6px;
+	}
+	
+	.dropdown-menu>li {
+	  line-height: 20px;
+	  padding-top: 2px;
+      padding-right: 20px;
+      padding-bottom: 2px;
+      padding-left: 20px;
+	}
+	
+	.dropdown-menu>li>a {
+	  font-size: 14px;
+	  line-height: 20px;
+	  height: 20px;
+	}
+	
+	.navbar .nav>li>.dropdown-menu:before {
+	  position: absolute;
+      top: -7px;
+      left: 9px;
+      display: inline-block;
+      border-right-width: 7px;
+	  border-right-style: solid;
+	  border-right-color: transparent;
+	  border-bottom-width: 7px;
+      border-bottom-style: solid;
+      border-bottom-color: #CCC;
+      border-left-width: 7px;
+      border-left-style: solid;
+      border-left-color: transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+      content: '';
+	}
+	
+	.navbar .nav>li>.dropdown-menu:after {
+	  position: absolute;
+      top: -6px;
+      left: 10px;
+      display: inline-block;
+	  border-right-width: 6px;
+      border-right-style: solid;
+      border-right-color: transparent;
+	  border-bottom-width: 6px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(255, 255, 255);
+	  border-left-width: 6px;
+      border-left-style: solid;
+      border-left-color: transparent;
+	  content: '';
+	}
+	
+	.navbar .nav>li {
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	}
+	
+	.navbar .nav>li>a {
+      float: right;
+      padding: 10px 15px 10px;
+      color: #6A6A6A;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #fff;
+    }
+    .navbar .nav>li>a:hover {
+      color: #202020;
+      text-decoration: none;
+      background-color: transparent;
+    }
+	
+	.dropdown-menu>li>a {
+	  color: #404040;
+	}
+	.dropdown-menu>li>a:hover {
+	  text-decoration: none;
+	}
+	
+	.dropdown-menu>li>a>div:hover {
+	  background-color: #E5E5E5 !important;
+	}
+	
+	.brand {
+      font-size: 20px;
+	  color: #303030;
+	}
+	
+	li {
+      line-height: 20px;
+    }
+	.nav {
+	  float: right;
+	}
+	.nav-collapse ul.nav li:hover {
+      background-color: #E3E3E3;
+    }
+	
+	body, body>.container>.row>.col-sm-4>.sticky-top>.card>.container>ul>li>a {
+      margin: 0;
+      font-family: "Lato", "Helvetica Neue",Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      color: #303030;
+	  background-color: #FFFFFF;
+    }
+	
+	h1, h2, h3, h4, h5 {
+      margin: 10px 0;
+      font-family: inherit;
+      font-weight: bold;
+      line-height: 20px;
+      color: inherit;
+      text-rendering: optimizelegibility;
+    }
+	
+	h1, h2, h3 {
+      line-height: 40px;
+    }
+	
+	h1 {
+	  font-size: 38.5px;
+	}
+	
+	.page-header {
+      padding-bottom: 15px;
+      margin: 25px 0 25px;
+      border-bottom: 1px solid #eee;
+    }
+	
+	table {
+	  background-color: transparent;
+	  border-spacing: 0;
+	}
+	
+	.table-bordered {
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+	  border-left: 0;
+	  border-collapse: separate;
+	}
+	
+	.table-bordered thead:first-child tr:first-child>th:first-child, .table-bordered tbody:first-child tr:first-child>td:first-child, .table-bordered tbody:first-child tr:first-child>th:first-child {
+      border-top-left-radius: 4px;
+    }
+	
+	.table-bordered caption+thead tr:first-child th, .table-bordered caption+tbody tr:first-child th, .table-bordered caption+tbody tr:first-child td, .table-bordered colgroup+thead tr:first-child th, .table-bordered colgroup+tbody tr:first-child th, .table-bordered colgroup+tbody tr:first-child td, .table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td {
+      border-top: 0;
+	  border-bottom: 0;
+    }
+	
+	.table caption+thead tr:first-child th, .table caption+thead tr:first-child td, .table colgroup+thead tr:first-child th, .table colgroup+thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
+      border-top: 0;
+	  border-bottom: 0;
+    }
+	
+	.table-bordered th, .table-bordered td {
+      border-left: 1px solid #ddd;
+	  border-right: 0;
+	  border-bottom: 0;
+    }
+	
+	.table th, .table td {
+      padding: 8px;
+      line-height: 20px;
+      text-align: left;
+      vertical-align: top;
+      border-top: 1px solid #ddd;
+    }
+	
+	td>div {
+	  padding-left: 0px;
+	}
+	td>div>div>a, td>div>div>span>a {
+	  color: #6A6A6A;
+	}
+	td>div>div>a:hover, td>div>div>span>a:hover {
+	  color: #202020;
+	}
+	
+	.nav-link {
+	  display: inline;
+	  padding: 0px;
+	}
+	
+	.table-striped tbody>tr:hover {
+	  background-color: #E3E3E3;
+	}
+	
+	.table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
+      background-color: #f8f8f8;
+    }
+	
+	.table-striped>tbody>tr:hover>* {
+      background-color: #ECECEC !important;
+    }
+	
+	#iconjump {
+	  color: #744321;
+	}
+	
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-light">
+  <a class="navbar-brand" href="archive_sr.htm">Anter11 > Serbian Archive</a>
+  <div class="nav-collapse justify-content-end">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="http://www.youtube.com/@anter11">
+		  <i class="fa fa-play"></i>
+		  Youtube
+		</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">
+          <i class="fa fa-cubes"></i>
+          Archive
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="archive_sr.htm">
+              Serbian
+            </a>
+          </li>
+		  <li>
+            <a href="">
+              Croatian [WIP]
+            </a>
+          </li>
+		  <div class="dropdown-divider"></div>
+		  <li>
+            <a href="lost_archive.htm" style="color: #8B0000">
+              Lost songs
+            </a>
+          </li>
+		</ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.htm">
+		  <i class="fa fa-dollar-sign"></i>
+		  Donate
+		</a>
+      </li>
+	  <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <i class="fa fa-globe"></i>
+          Language
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="https://web.archive.org/web/20160207075718/https://oc.tc/leaderboard">
+              <i class="flag-icon flag-icon-ad"></i>
+              English
+            </a>
+          </li>
+          <li>
+            <a href="/web/20160207075718/http://oc.tc/channels">
+              <i class="flag flag-sr"></i>
+              Serbian 
+            </a>
+          </li>
+		</ul>
+		<li>
+          <a href="contact.htm">
+            <i class="fa fa-list-ol"></i>
+            About Me
+          </a>
+        </li>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Mićo Kuzmanović</h1>
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+	  <h4>1.<i> Unknown</i><span class="float-right"><a href="" style="color: #E05400">1995</a></span></h4>
+	  <table class="table table-bordered table-striped">
+	    <thead>
+		  <th width="10%">#</th>
+		  <th width="10%">Time</th>
+		  <th>Song</th>
+		  <th width="20%">Links</th>
+		</thead>
+		<tbody>
+		  <tr>
+		    <td><strong>1</strong></td>
+			<td>4:17</td>
+			<td>Majko Pešina</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target=”_blank” href="https://drive.google.com/file/d/1pRkCdUIV2jVfjIzirhx4gtMjF9Dd_ZKz/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="#musicA">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=1pRkCdUIV2jVfjIzirhx4gtMjF9Dd_ZKz&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><strong>2</strong></td>
+			<td>3:38</td>
+			<td>Sve je Suze Isplakala</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target=”_blank” href="https://drive.google.com/file/d/1tRgF1K4ra9Wd8jCfbsaEdawCxJ9bJ7j8/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="#musicB">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=1tRgF1K4ra9Wd8jCfbsaEdawCxJ9bJ7j8&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><strong>3</strong></td>
+			<td>2:44</td>
+			<td>Drino Vodo Valovita</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target=”_blank” href="https://drive.google.com/file/d/1HrhlwvcqEHr6fA8QUPsNEoTZYxsm25fd/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="#musicC">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=1HrhlwvcqEHr6fA8QUPsNEoTZYxsm25fd&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><strong>4</strong></td>
+			<td>3:35</td>
+			<td>Neće Srbin u Vašoj Državi</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target="_blank" href="https://drive.google.com/file/d/1svS9rQIXLrhVN-RzWI0fXzs4a_t-P4Cy/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="#musicD">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=1svS9rQIXLrhVN-RzWI0fXzs4a_t-P4Cy&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><strong>5</strong></td>
+			<td>3:57</td>
+			<td>Rodno Selo Bukova</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target="_blank" href="https://drive.google.com/file/d/1UydYE62u7OOAK8E-QrQxvO4esO1d5xx7/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="#musicE">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=1UydYE62u7OOAK8E-QrQxvO4esO1d5xx7&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><strong><i>6-8</i></strong></td>
+			<td colspan="2"><i>Nothing is known about songs 6-8 on this album, if they existed at all.</i></td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target="_blank" href="">
+		            <i class="fa fa-music" style="color: #E05400"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="#musicF">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip" style="color: #E05400"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="">
+		            <i class="fa fa-download" style="color: #E05400"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+    </div>
+	<div class="col-sm-4">
+	  <div class="sticky-top">
+		<div class="card">
+	      <div class="container">
+	        <ul class="list-unstyled">
+		      <li><h5>Key:</h5></li>
+	          <li><i class="fa fa-music"></i>&nbsp;Listen to the song</li>
+			  <li><i class="fa fa-list"></i>&nbsp;Song text</li>
+		      <li><i class="fa fa-download"></i>&nbsp;Direct audio download</li>
+		  	  <li><i class="fa fa-video"></i>&nbsp;Official video</li>
+			  <br>
+			  <li><i class="fa fa-square" style="color: #E00000"></i>&nbsp; Known to exist, not found</li>
+			  <li><i class="fa fa-square" style="color: #E05400"></i>&nbsp; Existance unknown</li>
+			  <li><i class="fa fa-square" style="color: #E0E000"></i>&nbsp; Possibly unofficial</li>
+			  <li><i class="fa fa-square" style="color: #00E000"></i>&nbsp; Archived (use&nbsp;<i class="fa fa-square" style="color: #6A6A6A"></i>&nbsp;instead)</li>
+		      <li><i class="fa fa-square" style="color: #0000E0"></i>&nbsp; Partially found</li>
+			  <li><i class="fa fa-square" style="color: #E000E0"></i>&nbsp; <del>I don't know yet</del></li>
+			</ul>
+		  </div>
+		</div>
+		<br>
+	    <div class="card">
+	      <div class="container">
+	        <ul class="list-unstyled" >
+			<li style="margin-top: 6px;">
+			    <a data-toggle="collapse" data-toggle="collapse" href="#orangemusic" role="button" aria-expanded="false" aria-controls="orangemusic">
+			      <i class="fa fa-music" style="color: #E05400"></i>&nbsp;<b>3 unknown</b>
+				</a>
+			  </li>
+			  <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="orangemusic">
+				    <div class="container">
+			          <ul class="list-unstyled">
+			            <li>Songs 6 to 8</li>
+			          </ul>
+					</div>
+                  </div>
+                </div>
+              </div>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<div class="modal fade" id="musicA" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Majko Pešina</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Otpevaću jednu pesmu<br>
+Nek nas sada ona teši<br>
+Jer je ona posvećena<br>
+Div-junaku Peši<br>
+<br>
+Majko rođena, majko Pešina<br>
+Rodila si heroja<br>
+Grada Brčkog grada, posavskoga<br>
+<br>
+Toga dana kad smo čuli<br>
+Da je Peša preminuo<br>
+Narod srpske Posavine<br>
+U suze je zaronuo<br>
+<br>
+Mi Pešina svi smo braća<br>
+Koji će ga osvetiti<br>
+Nek se dušman ne raduje<br>
+Jer Peša će mnogih biti<br>
+<br>
+Nemoj plakat majko, oče<br>
+Što ste sina izgubili<br>
+Naša borba pokazaće<br>
+Junaka ste vi rodili<hr>
+
+Отпеваћу једну песму<br>
+Нек нас сада она теши<br>
+Јер је она посвећена<br>
+Див-јунаку Пеши<br>
+<br>
+Мајко рођена, мајко Пешина<br>
+Родила си хероја<br>
+Града Брчког града, посавскога<br>
+<br>
+Тога дана кад смо чули<br>
+Да је Пеша преминуо<br>
+Народ српске Посавине<br>
+У сузе је заронуо<br>
+<br>
+Ми Пешина сви смо браћа<br>
+Који ће га осветити<br>
+Нек се душман не радује<br>
+Јер Пеша ће многих бити<br>
+<br>
+Немој плакат мајко, оче<br>
+Што сте сина изгубили<br>
+Наша борба показаће<br>
+Јунака сте ви родили
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="musicB" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Sve je Suze Isplakala</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Sretoh je da nas samu <br>
+A dva je sina imala<br>
+U njenom oku ne videh suzu<br>
+Jer sve je suze isplakala<br>
+<br>
+Ona se majkom zove<br>
+I svi smo deca njena<br>
+Noći i dane provodi sama<br>
+Živeći od uspomena<br>
+<br>
+A šta ga radi ljudi<br>
+Ka srce još uvek bije<br>
+Jer živa u grob nemožeš<br>
+Znam majko kako ti je<hr>
+
+Сретох је да нас саму <br>
+А два је сина имала<br>
+У њеном оку не видех сузу<br>
+Јер све је сузе исплакала<br>
+<br>
+Она се мајком зове<br>
+И сви смо деца њена<br>
+Ноћи и дане проводи сама<br>
+Живећи од успомена<br>
+<br>
+А шта га ради људи<br>
+Ка срце још увек бије<br>
+Јер жива у гроб неможеш<br>
+Знам мајко како ти је
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="musicC" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Drino Vodo Valovita</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Što si Drino tako hladna<br>
+Što si Drino valovita<br>
+Vekovima neku žuriš<br>
+Vekovima neku pitaš<br>
+<br>
+Stani malo pa ispričaj<br>
+Ono što je tebi znano<br>
+U tebi je mnogo tajni<br>
+Mnogo toga zapisano<br>
+<br>
+I danas te gledam Drino<br>
+Plakovitu i nemirnu<br>
+Danas imaj žuborom<br>
+Pevaš Drino svoju himno<br>
+<br>
+Tajne mnoge kriješ reko<br>
+Jer mnogo se toga zbilo<br>
+Da li ćeš i skrivat večno<br>
+Žuboreći tako milo<br>
+<br>
+Teško te je razumeti<br>
+Teško te je upoznati<br>
+Al voleti nije teško<br>
+I s tobom se radovati<br>
+<br>
+Sloboda je radost tvoja<br>
+Sloboda je pored tebe<br>
+Nek i tvoja priča bude<br>
+Da kraj tebe svi se ljube<hr>
+
+Што си Дрино тако хладна<br>
+Што си Дрино валовита<br>
+Вековима неку журиш<br>
+Вековима неку питаш<br>
+<br>
+Стани мало па испричај<br>
+Оно што је теби знано<br>
+У теби је много тајни<br>
+Много тога записано<br>
+<br>
+И данас те гледам Дрино<br>
+Плаковиту и немирну<br>
+Данас имај жубором<br>
+Певаш Дрино своју химно<br>
+<br>
+Тајне многе кријеш реко<br>
+Јер много се тога збило<br>
+Да ли ћеш и скриват вечно<br>
+Жуборећи тако мило<br>
+<br>
+Тешко те је разумети<br>
+Тешко те је упознати<br>
+Ал волети није тешко<br>
+И с тобом се радовати<br>
+<br>
+Слобода је радост твоја<br>
+Слобода је поред тебе<br>
+Нек и твоја прича буде<br>
+Да крај тебе сви се љубе
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="musicD" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Neće Srbin u Vašoj Državi</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Zar mislite sve će biti vaše<br>
+Zar mislite da se Srbi plaše<br>
+Neboje se nikoga sem Boga<br>
+I zakona jednog istinskoga<br>
+<br>
+To je zakon svetitelja Save<br>
+Da za pravdu nežale se glave<br>
+Srbi imaste naneknuli borbu<br>
+Jer se hteli da sa vama odu<br>
+<br>
+Neće Srbin u vašoj državi<br>
+S vama živ je a misli do glavi<br>
+Srbin hoće da slobodno diše<br>
+I da svojom ćirilicom piše<br>
+<br>
+Srbin čuva sve svetinje svoje<br>
+Da ga slave a ne da se boje<br>
+To sa vama nemože i neće<br>
+Svojim putem idite nesreće<hr>
+
+Зар мислите све ће бити ваше<br>
+Зар мислите да се Срби плаше<br>
+Небоје се никога сем Бога<br>
+И закона једног истинскога<br>
+<br>
+То је закон светитеља Саве<br>
+Да за правду нежале се главе<br>
+Срби имасте нанекнули борбу<br>
+Јер се хтели да са вама оду<br>
+<br>
+Неће Србин у вашој држави<br>
+С вама жив је а мисли до глави<br>
+Србин хоће да слободно дише<br>
+И да својом ћирилицом пише<br>
+<br>
+Србин чува све светиње своје<br>
+Да га славе а не да се боје<br>
+То са вама неможе и неће<br>
+Својим путем идите несреће
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="musicE" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Rodno Selo Bukova</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Rodno selo Bukova je Greda<br>
+Ukrali su od moga pogleda<br>
+To je bilo devetdeset-druge<br>
+Što u crnu zavi mnoge ljude<br>
+<br>
+Mnogo rana, šesnaest života<br>
+Mili Bože pa to je greota<br>
+Bez ikakve krivice su bili<br>
+Osim Srbi što su se rodili<br>
+<br>
+Toga Maja sećaću se duže<br>
+Kada crne procvale su ruže <br>
+Kad Ustaše da i Bog ubije<br>
+Navališe na Srbe komšije<br>
+<br>
+Zdrade male, stare i nejake<br>
+Zakukaše mnoge srpske majke<br>
+Malo selo uspomeno moja<br>
+Nek i stigne samo kletva tvoja<hr>
+
+Родно село Букова је Греда<br>
+Украли су од мога погледа<br>
+То је било деветдесет-друге<br>
+Што у црну зави многе људе<br>
+<br>
+Много рана, шеснаест живота<br>
+Мили Боже па то је греота<br>
+Без икакве кривице су били<br>
+Осим Срби што су се родили<br>
+<br>
+Тога Маја сећаћу се дуже<br>
+Када црне процвале су руже <br>
+Кад Усташе да и Бог убије<br>
+Навалише на Србе комшије<br>
+<br>
+Здраде мале, старе и нејаке<br>
+Закукаше многе српске мајке<br>
+Мало село успомено моја<br>
+Нек и стигне само клетва твоја
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <hr>
+  <div class="row">
+    <div class="col-md-2 offset-md-4">
+      <h6 class="text-center">© Anter11 2023</h6>
+	</div>
+	<div class="col-md-2">
+	  <a href="#"> <h6 class="text-right">Anter12</h6> </a>
+	</div>
+  </div>
+</footer>
+
+</body>
+
+</html>
