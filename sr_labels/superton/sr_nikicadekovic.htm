@@ -1,0 +1,1026 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Nikica Đeković</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('[data-toggle="tooltip"]').tooltip();   
+    });
+  </script>
+  <style>
+    p {
+      color: red;
+      text-align: left;
+    }
+	
+	.navbar {
+	  background-image: linear-gradient(#FAFAFA, #E9E9E9);
+	  padding-top: 0px; 
+	  padding-bottom: 0px; 
+	}
+	
+	ul.dropdown-menu {
+	  padding-top: 5px;
+      padding-right: 0px;
+      padding-bottom: 5px;
+      padding-left: 0px;
+	  box-shadow: 0 0px 14px rgba(0, 0, 0, 0.2);
+	  font-size: 16px;
+	  width: 175px;
+	  border-top-width: 2px;
+      border-right-width: 2px;
+      border-bottom-width: 2px;
+      border-left-width: 2px;
+      border-top-style: solid;
+      border-right-style: solid;
+      border-bottom-style: solid;
+      border-left-style: solid;
+	  border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+      border-bottom-right-radius: 6px;
+      border-bottom-left-radius: 6px;
+	}
+	
+	.dropdown-menu>li {
+	  line-height: 20px;
+	  padding-top: 2px;
+      padding-right: 20px;
+      padding-bottom: 2px;
+      padding-left: 20px;
+	}
+	
+	.dropdown-menu>li>a {
+	  font-size: 14px;
+	  line-height: 20px;
+	  height: 20px;
+	}
+	
+	.navbar .nav>li>.dropdown-menu:before {
+	  position: absolute;
+      top: -7px;
+      left: 9px;
+      display: inline-block;
+      border-right-width: 7px;
+	  border-right-style: solid;
+	  border-right-color: transparent;
+	  border-bottom-width: 7px;
+      border-bottom-style: solid;
+      border-bottom-color: #CCC;
+      border-left-width: 7px;
+      border-left-style: solid;
+      border-left-color: transparent;
+      border-bottom-color: rgba(0, 0, 0, 0.2);
+      content: '';
+	}
+	
+	.navbar .nav>li>.dropdown-menu:after {
+	  position: absolute;
+      top: -6px;
+      left: 10px;
+      display: inline-block;
+	  border-right-width: 6px;
+      border-right-style: solid;
+      border-right-color: transparent;
+	  border-bottom-width: 6px;
+      border-bottom-style: solid;
+      border-bottom-color: rgb(255, 255, 255);
+	  border-left-width: 6px;
+      border-left-style: solid;
+      border-left-color: transparent;
+	  content: '';
+	}
+	
+	.navbar .nav>li {
+	  padding-top: 4px;
+	  padding-bottom: 4px;
+	}
+	
+	.navbar .nav>li>a {
+      float: right;
+      padding: 10px 15px 10px;
+      color: #6A6A6A;
+      text-decoration: none;
+      text-shadow: 0 1px 0 #fff;
+    }
+    .navbar .nav>li>a:hover {
+      color: #202020;
+      text-decoration: none;
+      background-color: transparent;
+    }
+	
+	.dropdown-menu>li>a {
+	  color: #404040;
+	}
+	.dropdown-menu>li>a:hover {
+	  text-decoration: none;
+	}
+	
+	.dropdown-menu>li>a>div:hover {
+	  background-color: #E5E5E5 !important;
+	}
+	
+	.brand {
+      font-size: 20px;
+	  color: #303030;
+	}
+	
+	li {
+      line-height: 20px;
+    }
+	.nav {
+	  float: right;
+	}
+	.nav-collapse ul.nav li:hover {
+      background-color: #E3E3E3;
+    }
+	
+	body, body>.container>.row>.col-sm-4>.sticky-top>.card>.container>ul>li>a {
+      margin: 0;
+      font-family: "Lato", "Helvetica Neue", Helvetica,Arial,sans-serif;
+      font-size: 16px;
+      line-height: 20px;
+      color: #303030;
+	  background-color: #FFFFFF;
+    }
+	
+	h1, h2, h3, h4, h5 {
+      margin: 10px 0;
+      font-family: inherit;
+      font-weight: bold;
+      line-height: 20px;
+      color: inherit;
+      text-rendering: optimizelegibility;
+    }
+	
+	h1, h2, h3 {
+      line-height: 40px;
+    }
+	
+	h1 {
+	  font-size: 38.5px;
+	}
+	
+	.page-header {
+      padding-bottom: 15px;
+      margin: 25px 0 25px;
+      border-bottom: 1px solid #eee;
+    }
+	
+	table {
+	  background-color: transparent;
+	  border-spacing: 0;
+	}
+	
+	.table-bordered {
+	  border: 1px solid #ddd;
+	  border-radius: 4px;
+	  border-left: 0;
+	  border-collapse: separate;
+	}
+	
+	.table-bordered thead:first-child tr:first-child>th:first-child, .table-bordered tbody:first-child tr:first-child>td:first-child, .table-bordered tbody:first-child tr:first-child>th:first-child {
+      border-top-left-radius: 4px;
+    }
+	
+	.table-bordered caption+thead tr:first-child th, .table-bordered caption+tbody tr:first-child th, .table-bordered caption+tbody tr:first-child td, .table-bordered colgroup+thead tr:first-child th, .table-bordered colgroup+tbody tr:first-child th, .table-bordered colgroup+tbody tr:first-child td, .table-bordered thead:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child th, .table-bordered tbody:first-child tr:first-child td {
+      border-top: 0;
+	  border-bottom: 0;
+    }
+	
+	.table caption+thead tr:first-child th, .table caption+thead tr:first-child td, .table colgroup+thead tr:first-child th, .table colgroup+thead tr:first-child td, .table thead:first-child tr:first-child th, .table thead:first-child tr:first-child td {
+      border-top: 0;
+	  border-bottom: 0;
+    }
+	
+	.table-bordered th, .table-bordered td {
+      border-left: 1px solid #ddd;
+	  border-right: 0;
+	  border-bottom: 0;
+    }
+	
+	.table th, .table td {
+      padding: 8px;
+      line-height: 20px;
+      text-align: left;
+      vertical-align: top;
+      border-top: 1px solid #ddd;
+    }
+	
+	td>div {
+	  padding-left: 0px;
+	}
+	td>div>div>a, td>div>div>span>a {
+	  color: #6A6A6A;
+	}
+	td>div>div>a:hover, td>div>div>span>a:hover {
+	  color: #202020;
+	}
+	
+	.nav-link {
+	  display: inline;
+	  padding: 0px;
+	}
+	
+	.table-striped tbody>tr:hover {
+	  background-color: #E3E3E3;
+	}
+	
+	.table-striped tbody>tr:nth-child(odd)>td, .table-striped tbody>tr:nth-child(odd)>th {
+      background-color: #f6f6f6;
+    }
+	
+	.table-striped>tbody>tr:hover>* {
+      background-color: #ECECEC !important;
+    }
+	
+	#iconjump {
+	  color: #744321;
+	}
+	
+    }
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-light">
+  <a class="navbar-brand" href="../superton.htm">Anter11 > Serbian Archive > Superton</a>
+  <div class="nav-collapse justify-content-end">
+    <ul class="nav">
+      <li class="nav-item">
+        <a class="nav-link" href="http://www.youtube.com/@anter11">
+		  <i class="fa fa-play"></i>
+		  Youtube
+		</a>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">
+          <i class="fa fa-cubes"></i>
+          Archive
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="../../archive_sr.htm">
+              Serbian
+            </a>
+          </li>
+		  <li>
+            <a href="">
+              Croatian [WIP]
+            </a>
+          </li>
+		  <div class="dropdown-divider"></div>
+		  <li>
+            <a href="lost_archive.htm" style="color: #8B0000">
+              Lost songs
+            </a>
+          </li>
+		</ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="index.htm">
+		  <i class="fa fa-dollar-sign"></i>
+		  Donate
+		</a>
+      </li>
+	  <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+          <i class="fa fa-globe"></i>
+          Language
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li>
+            <a href="https://web.archive.org/web/20160207075718/https://oc.tc/leaderboard">
+              <i class="flag-icon flag-icon-ad"></i>
+              English
+            </a>
+          </li>
+          <li>
+            <a href="/web/20160207075718/http://oc.tc/channels">
+              <i class="flag flag-sr"></i>
+              Serbian 
+            </a>
+          </li>
+		</ul>
+		<li>
+          <a href="../../contact.htm">
+            <i class="fa fa-list-ol"></i>
+            About Me
+          </a>
+        </li>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="page-header">
+    <h1>Nikica Đeković</h1>
+  </div>
+  <div class="row" id="stk9433">
+    <div class="col-sm-8">
+	  <h4>1. Mala moja moj Šećeru<span class="float-right"><a href="https://www.youtube.com/watch?v=sCIL_JcyIic">1994</a></span></h4>
+	  <table class="table table-bordered table-striped">
+	    <thead>
+		  <th width="5%">#</th>
+		  <th width="10%">Time</th>
+		  <th>Song</th>
+		  <th width="18%">Links</th>
+		</thead>
+		<tbody>
+		  <tr>
+		    <td><strong>1</strong></td>
+			<td>3:25</td>
+			<td>Mala moja moj Šećeru</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target="_blank" href="https://drive.google.com/file/d/1yrdUZgDWvkT3JibTiUT8GB2mSDzzjerb/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=1yrdUZgDWvkT3JibTiUT8GB2mSDzzjerb&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><strong>2</strong></td>
+			<td>2:49</td>
+			<td>Prorasto je Mali Mrav</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target="_blank" href="https://drive.google.com/file/d/1y0xl7BdzWF5LoG9XaoiMG_WPGeerNfBc/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=1y0xl7BdzWF5LoG9XaoiMG_WPGeerNfBc&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><strong>3</strong></td>
+			<td>2:29</td>
+			<td>Uvek s tobom Lepo mi Je</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target="_blank" href="https://drive.google.com/file/d/1mBNrALJW7pc2O09dUmVyKAglX9_Htoga/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=1mBNrALJW7pc2O09dUmVyKAglX9_Htoga&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><strong>4</strong></td>
+			<td>4:06</td>
+			<td>Trebaš mi u Starosti</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target="_blank" href="https://drive.google.com/file/d/1F8pqbfc1ls_3X3LXQbsEiW0rMfxtyVYM/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=1F8pqbfc1ls_3X3LXQbsEiW0rMfxtyVYM&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><strong>5</strong></td>
+			<td>3:00</td>
+			<td>Kockar - Car</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target="_blank" href="https://drive.google.com/file/d/1bS1kjmOTQAI9KdPChyB1J9VT6nYkpYmH/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=1bS1kjmOTQAI9KdPChyB1J9VT6nYkpYmH&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><strong>6</strong></td>
+			<td>2:48</td>
+			<td>Što me Ostavi-Neka Neka</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target="_blank" href="https://drive.google.com/file/d/1kvIXQnIMySAc_9RYjM-jSDk1K8QMu4eF/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=1kvIXQnIMySAc_9RYjM-jSDk1K8QMu4eF&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><strong>7</strong></td>
+			<td>3:42</td>
+			<td>Ti me Ljubiš Preko Volje</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target="_blank" href="https://drive.google.com/file/d/15JchM56Y6xgLBQFpne9-ACTFJLkZJ88K/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=15JchM56Y6xgLBQFpne9-ACTFJLkZJ88K&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		  <tr>
+		    <td><strong>8</strong></td>
+			<td>3:42</td>
+			<td>Tražićeš me Jednog Dana</td>
+			<td>
+			  <div class="row">
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Audio HQ" target="_blank" href="https://drive.google.com/file/d/1QB58Z_unls45B32Bf6mG9barAaMAYRhn/view?usp=drive_link">
+		            <i class="fa fa-music"></i>
+		          </a>
+			    </div>
+			    <div class="col-sm-2">
+				  <span data-toggle="modal" data-target="">
+			        <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Text">
+		              <i class="fa fa-list" data-toggle="tooltip"></i>
+		            </a>
+				  </span>
+			    </div>
+			    <div class="col-sm-2">
+			      <a class="nav-link" data-toggle="tooltip" data-placement="top" title="Download .mp3" href="https://drive.google.com/u/5/uc?id=1QB58Z_unls45B32Bf6mG9barAaMAYRhn&export=download">
+		            <i class="fa fa-download"></i>
+		          </a>
+			    </div>
+			  </div>
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+	</div>
+	<div class="col-sm-4">
+	  <div class="sticky-top">
+	    <br>
+		<div class="card">
+	      <div class="container">
+	        <ul class="list-unstyled">
+		      <li><h5>Key:</h5></li>
+	          <li><i class="fa fa-music"></i>&nbsp;Listen to the song</li>
+			  <li><i class="fa fa-list"></i>&nbsp;Song text</li>
+		      <li><i class="fa fa-download"></i>&nbsp;Direct audio download</li>
+		  	  <li><i class="fa fa-video"></i>&nbsp;Official video</li>
+			  <br>
+			  <li><i class="fa fa-square" style="color: #E00000"></i>&nbsp; Known to exist, not found</li>
+			  <li><i class="fa fa-square" style="color: #E05400"></i>&nbsp; Existance unknown</li>
+			  <li><i class="fa fa-square" style="color: #E0E000"></i>&nbsp; Possibly unofficial</li>
+			  <li><i class="fa fa-square" style="color: #00E000"></i>&nbsp; Archived (use&nbsp;<i class="fa fa-square" style="color: #6A6A6A"></i>&nbsp;instead)</li>
+		      <li><i class="fa fa-square" style="color: #0000E0"></i>&nbsp; Partially found</li>
+			  <li><i class="fa fa-square" style="color: #E000E0"></i>&nbsp; <del>I don't know yet</del></li>
+			</ul>
+		  </div>
+		</div>
+		<br>
+	    <div class="card">
+	      <div class="container">
+	        <ul class="list-unstyled" >
+			  <li style="margin-top: 6px;">
+			    <a data-toggle="collapse" data-toggle="collapse" href="#redtekst" role="button" aria-expanded="false" aria-controls="redtekst">
+			      <i class="fa fa-list" style="color: #E00000"></i>&nbsp;<b>I didn't put in any of these lyrics yet</b>
+				</a>
+			  </li>
+			  <div class="row">
+                <div class="col">
+                  <div class="collapse multi-collapse" id="redtekst">
+				    <div class="container">
+			          <ul class="list-unstyled">
+			          </ul>
+					</div>
+                  </div>
+                </div>
+              </div>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+</div>
+
+<div class="modal fade" id="musicA" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Budi mi Drug do Kraja</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Noćas ti pričam o sebi<br>
+Poslušaj moje reći<br>
+Nekad sam bio srećan<br>
+Sad vinom tugu lečim<br>
+<br>
+Budi mi drug do kraja<br>
+Ne daj da tuga me sruši<br>
+Samo sam tebi rekao<br>
+Sve što sam krio u duši<br>
+<br>
+Noćas, bez trunke laži<br>
+Životna priča teče<br>
+Ljubi me noćas ljubi me<br>
+Da pamtim ovo veče<br>
+<br>
+Noćas govori srce<br>
+Istinu duša toči<br>
+Ja sam isto ko nekad<br>
+Zaljubljen u tvoje oči<hr>
+
+Ноћас ти причам о себи<br>
+Послушај моје рећи<br>
+Некад сам био срећан<br>
+Сад вином тугу лечим<br>
+<br>
+Буди ми друг до краја<br>
+Не дај да туга ме сруши<br>
+Само сам теби рекао<br>
+Све што сам крио у души<br>
+<br>
+Ноћас, без трунке лажи<br>
+Животна прича тече<br>
+Љуби ме ноћас љуби ме<br>
+Да памтим ово вече<br>
+<br>
+Ноћас говори срце<br>
+Истину душа точи<br>
+Ја сам исто ко некад<br>
+Заљубљен у твоје очи
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="musicB" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Potraži Me</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Obriši suze, idi<br>
+Proputuj svetom, vidi<br>
+S kim ti je najlepše<br>
+Okreni glavu, okreni<br>
+Ne misli kako je meni<br>
+Ja ću te čekati<br>
+ <br>
+Kad prođu sve lude godine<br>
+Kad vetrovi sete vrate te<br>
+Potraži me u predgrađu<br>
+Pronađi me u sećanju<br>
+<br>
+Mladost te vuće, idi<br>
+Život je kratak, vidi<br>
+Ja sam ti umoran<br>
+Proći će godine duge<br>
+Sa malo sreće i tuge<br>
+Uspomene boliće<hr>
+
+Обриши сузе, иди<br>
+Пропутуј светом, види<br>
+С ким ти је најлепше<br>
+Окрени главу, окрени<br>
+Не мисли како је мени<br>
+Ја ћу те чекати<br>
+ <br>
+Кад прођу све луде године<br>
+Кад ветрови сете врате те<br>
+Потражи ме у предграђу<br>
+Пронађи ме у сећању<br>
+<br>
+Младост те вуће, иди<br>
+Живот је кратак, види<br>
+Ја сам ти уморан<br>
+Проћи ће године дуге<br>
+Са мало среће и туге<br>
+Успомене болиће
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="musicC" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Neka Puknu Svi</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Sanjao sam loše snove, da smo ljuti mi<br>
+Da su neki zli jeznici svašta pričali<br>
+Hoće da nas posvađaju, moja ljubavi<br>
+Hoće da nam sreću uzmu, crni dušmani<br>
+<br>
+Hej, hej, neka puknu svi<br>
+Hej, hej, naši dušmani<br>
+Hej, hej, neka puknu svi<br>
+Hej, hej, naši dušmani<br>
+<br>
+Kao da su svi đavoli čine bacili<br>
+Kao da su naše sreći svi zavidni<br>
+Hoće da nas posvađaju, moja ljubavi<br>
+Hoće da nam sreću uzmu, crni dušmani<br>
+<br>
+Nestali su loši snovi, jutros svanulo<br>
+Opet naše sreće, draga, sunce granulo<br>
+Hoće da nas posvađaju, moja ljubavi<br>
+Hoće da nam sreću uzmu, crni dušmani<hr>
+
+Сањао сам лоше снове, да смо љути ми<br>
+Да су неки зли језници свашта причали<br>
+Хоће да нас посвађају, моја љубави<br>
+Хоће да нам срећу узму, црни душмани<br>
+<br>
+Хеј, хеј, нека пукну сви<br>
+Хеј, хеј, наши душмани<br>
+Хеј, хеј, нека пукну сви<br>
+Хеј, хеј, наши душмани<br>
+<br>
+Као да су сви ђаволи чине бацили<br>
+Као да су наше срећи сви завидни<br>
+Хоће да нас посвађају, моја љубави<br>
+Хоће да нам срећу узму, црни душмани<br>
+<br>
+Нестали су лоши снови, јутрос свануло<br>
+Опет наше среће, драга, сунце грануло<br>
+Хоће да нас посвађају, моја љубави<br>
+Хоће да нам срећу узму, црни душмани
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="musicD" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Belasicom Pasla Stada</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Bjelasicom pasla stada<br>
+Čuvala ih bela Rada<br>
+Njoj dolazi momče mlado<br>
+Pa joj veli zdravo, Rado<br>
+ <br>
+Zdravo Rado, zdravo zlato<br>
+Zdravo, momče nepoznato<br>
+Otkud Rado, otkud zlato<br>
+Otkud sam ti nepoznato<br>
+<br>
+Još kada smo bili mali<br>
+Tvoji su me zetom zvali<br>
+Tvoji su me zvali zete<br>
+Dođe vreme i uzeh te<hr>
+
+Бјеласицом пасла стада<br>
+Чувала их бела Рада<br>
+Њој долази момче младо<br>
+Па јој вели здраво, Радо<br>
+ <br>
+Здраво Радо, здраво злато<br>
+Здраво, момче непознато<br>
+Откуд Радо, откуд злато<br>
+Откуд сам ти непознато<br>
+<br>
+Још када смо били мали<br>
+Твоји су ме зетом звали<br>
+Твоји су ме звали зете<br>
+Дође време и узех те
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="musicE" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Majci Srpkinji</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Ne plači majko što radost tvoja<br>
+U borbu kreće za narod svoj<br>
+Došlo je vreme kad opet mora<br>
+Srbin da ide u ljuti boj<br>
+ <br>
+Ako mi se nešto desi<br>
+Stegni srce ti ne plači<br>
+Jer ti si majka Srpkinja<br>
+Od tuge ponos je jači<br>
+<br>
+Znam da se brineš s kim sam i gde sam<br>
+I da te hladan probija znoj<br>
+Kad oce borbe najteže vode<br>
+Tebi se čini tu sin je tvoj<br>
+<br>
+Kao da gledam ti svake noći<br>
+Dugo se moliš za sina svog<br>
+Naša je borba pravedna majko<br>
+I za to Srbe čuvaj Bog<hr>
+
+Не плачи мајко што радост твоја<br>
+У борбу креће за народ свој<br>
+Дошло је време кад опет мора<br>
+Србин да иде у љути бој<br>
+ <br>
+Ако ми се нешто деси<br>
+Стегни срце ти не плачи<br>
+Јер ти си мајка Српкиња<br>
+Од туге понос је јачи<br>
+<br>
+Знам да се бринеш с ким сам и где сам<br>
+И да те хладан пробија зној<br>
+Кад оце борбе најтеже воде<br>
+Теби се чини ту син је твој<br>
+<br>
+Као да гледам ти сваке ноћи<br>
+Дуго се молиш за сина свог<br>
+Наша је борба праведна мајко<br>
+И за то Србе чувај Бог
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="musicF" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Zbogom Ivana</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Zlato moje, još večeras<br>
+Želim usme da ti ljubim<br>
+Svake loje, tužno srce<br>
+Znam da sutra tebe gubi<br>
+ <br>
+Zbogom zbogom Ivana<br>
+Znam nećeš se vratiti<br>
+Zbogom zbogom Ivana<br>
+Dugo ću te pamtiti<br>
+<br>
+Dao sam ti, što se moglo<br>
+Al hladne su usne tvoje<br>
+Kome sad da, pesme piše<br>
+Usamljeno srce moje<br>
+<br>
+Moja ljubav ide s tobom<br>
+Na rastanku ove noći<br>
+Zbogom, nek te sreća prati<br>
+I moja će tuga proći<hr>
+
+Злато моје, још вечерас<br>
+Желим усме да ти љубим<br>
+Сваке лоје, тужно срце<br>
+Знам да сутра тебе губи<br>
+ <br>
+Збогом збогом Ивана<br>
+Знам нећеш се вратити<br>
+Збогом збогом Ивана<br>
+Дуго ћу те памтити<br>
+<br>
+Дао сам ти, што се могло<br>
+Ал хладне су усне твоје<br>
+Коме сад да, песме пише<br>
+Усамљено срце моје<br>
+<br>
+Моја љубав иде с тобом<br>
+На растанку ове ноћи<br>
+Збогом, нек те срећа прати<br>
+И моја ће туга проћи
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="musicG" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Kažu li ti da sam Pijan</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Samo jednoj leto, tjera me da pije<br>
+Onaj mesec Juli zaspao sa nama<br>
+I ništa mi više ne reme ti snove<br>
+Od imena tvoga, ženo izgubljena<br>
+<br>
+Kažu li ti da sam pijan<br>
+Ne veruj im, molim te<br>
+To ja padam i ustajem<br>
+Idem tebi, jer volim te<br>
+<br>
+Samo naša pesma, tera me da pevam<br>
+Onaj refren tuđi, ostao u nama<br>
+To je naša pesma i ostaje meni<br>
+Da mi noći krati, ženo izgubljena<br>
+<br>
+Samo moj odlazak ne da mi da pati<br>
+I tvoj pogled blagi, u očima mojim<br>
+I ništa me više oboriti neće<br>
+Od ovoga čaša, ostajem da stojim<hr>
+
+Само једној лето, тјера ме да пије<br>
+Онај месец Јули заспао са нама<br>
+И ништа ми више не реме ти снове<br>
+Од имена твога, жено изгубљена<br>
+<br>
+Кажу ли ти да сам пијан<br>
+Не веруј им, молим те<br>
+То ја падам и устајем<br>
+Идем теби, јер волим те<br>
+<br>
+Само наша песма, тера ме да певам<br>
+Онај рефрен туђи, остао у нама<br>
+То је наша песма и остаје мени<br>
+Да ми ноћи крати, жено изгубљена<br>
+<br>
+Само мој одлазак не да ми да пати<br>
+И твој поглед благи, у очима мојим<br>
+И ништа ме више оборити неће<br>
+Од овога чаша, остајем да стојим
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="musicH" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+	    <h5 class="modal-title">Pesma Bivšem Drugu</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+Sećaš li se bivši druže<br>
+Nekad dok smo bili mali<br>
+Kod mene si dolazio<br>
+I tvoji su mene zvali<br>
+ <br>
+Kakvu hoćeš druže Bosnu ?<br>
+U njoj Srbi da vam služe ?<br>
+Sad tenkovi kad zagrme<br>
+Kako ti je bivši druže ?<br>
+<br>
+Voleli smo isto piće<br>
+Iste pesme, iste žene<br>
+Al rat stiže i ti dođe<br>
+Sa oružjem tad kod mene<br>
+<br>
+Nemoj sutra da me tražiš<br>
+I da pričaš "nisam znao"<br>
+Kunem ti se, oplakaćeš<br>
+Ono što si zakuvao<hr>
+
+Сећаш ли се бивши друже<br>
+Некад док смо били мали<br>
+Код мене си долазио<br>
+И твоји су мене звали<br>
+ <br>
+Какву хоћеш друже Босну ?<br>
+У њој Срби да вам служе ?<br>
+Сад тенкови кад загрме<br>
+Како ти је бивши друже ?<br>
+<br>
+Волели смо исто пиће<br>
+Исте песме, исте жене<br>
+Ал рат стиже и ти дође<br>
+Са оружјем тад код мене<br>
+<br>
+Немој сутра да ме тражиш<br>
+И да причаш "нисам знао"<br>
+Кунем ти се, оплакаћеш<br>
+Оно што си закувао
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <hr>
+  <div class="row">
+    <div class="col-md-2 offset-md-4">
+      <h6 class="text-center">© Anter11 2023</h6>
+	</div>
+	<div class="col-md-2">
+	  <a href="#"> <h6 class="text-right">Anter12</h6> </a>
+	</div>
+  </div>
+</footer>
+
+</body>
+
+</html>
